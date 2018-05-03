@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B5F8C05D990167F96A04795 /* Pods_QuieroReciclar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8493B5A4E9C42DA1C3346F81 /* Pods_QuieroReciclar.framework */; };
 		E411E79E2097CA7B008D6D2C /* RecyclableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E411E79D2097CA7B008D6D2C /* RecyclableView.xib */; };
 		E411E7A02097CA97008D6D2C /* RecyclableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411E79F2097CA97008D6D2C /* RecyclableView.swift */; };
 		E411E7A22097D584008D6D2C /* NotRecyclableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E411E7A12097D584008D6D2C /* NotRecyclableView.xib */; };
@@ -36,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38A8D49BD232B42AE6967295 /* Pods-QuieroReciclar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuieroReciclar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuieroReciclar/Pods-QuieroReciclar.debug.xcconfig"; sourceTree = "<group>"; };
+		8493B5A4E9C42DA1C3346F81 /* Pods_QuieroReciclar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuieroReciclar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A77D67C75CAE2206E2E52F21 /* Pods-QuieroReciclar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuieroReciclar.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuieroReciclar/Pods-QuieroReciclar.release.xcconfig"; sourceTree = "<group>"; };
 		E411E79D2097CA7B008D6D2C /* RecyclableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecyclableView.xib; sourceTree = "<group>"; };
 		E411E79F2097CA97008D6D2C /* RecyclableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclableView.swift; sourceTree = "<group>"; };
 		E411E7A12097D584008D6D2C /* NotRecyclableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotRecyclableView.xib; sourceTree = "<group>"; };
@@ -71,12 +75,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B5F8C05D990167F96A04795 /* Pods_QuieroReciclar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F98EBE54746DF811E428F68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8493B5A4E9C42DA1C3346F81 /* Pods_QuieroReciclar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5885D1E79FE93D23621F9A14 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38A8D49BD232B42AE6967295 /* Pods-QuieroReciclar.debug.xcconfig */,
+				A77D67C75CAE2206E2E52F21 /* Pods-QuieroReciclar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E411E7A72097DB53008D6D2C /* Factories */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +117,8 @@
 			children = (
 				E42ECDB12094F207009D505A /* QuieroReciclar */,
 				E42ECDB02094F207009D505A /* Products */,
+				5885D1E79FE93D23621F9A14 /* Pods */,
+				0F98EBE54746DF811E428F68 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E42ECDC12094F209009D505A /* Build configuration list for PBXNativeTarget "QuieroReciclar" */;
 			buildPhases = (
+				09FC7844128D58D6B0EB032E /* [CP] Check Pods Manifest.lock */,
 				E42ECDAB2094F207009D505A /* Sources */,
 				E42ECDAC2094F207009D505A /* Frameworks */,
 				E42ECDAD2094F207009D505A /* Resources */,
+				E7E37883D35EE13474B65F1D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,6 +263,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09FC7844128D58D6B0EB032E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuieroReciclar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7E37883D35EE13474B65F1D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QuieroReciclar/Pods-QuieroReciclar-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuieroReciclar/Pods-QuieroReciclar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E42ECDAB2094F207009D505A /* Sources */ = {
@@ -402,15 +467,13 @@
 		};
 		E42ECDC22094F209009D505A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38A8D49BD232B42AE6967295 /* Pods-QuieroReciclar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PDHMHUDZZV;
 				INFOPLIST_FILE = QuieroReciclar/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.blunoid.QuieroReciclar;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_MODULE_NAME)";
 				PRODUCT_NAME = QuieroReciclar;
@@ -421,15 +484,13 @@
 		};
 		E42ECDC32094F209009D505A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A77D67C75CAE2206E2E52F21 /* Pods-QuieroReciclar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PDHMHUDZZV;
 				INFOPLIST_FILE = QuieroReciclar/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.blunoid.QuieroReciclar;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_MODULE_NAME)";
 				PRODUCT_NAME = QuieroReciclar;
