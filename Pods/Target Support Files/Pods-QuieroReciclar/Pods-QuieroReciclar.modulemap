@@ -1,6 +1,0 @@
-framework module Pods_QuieroReciclar {
-  umbrella header "Pods-QuieroReciclar-umbrella.h"
-
-  export *
-  module * { export * }
-}
