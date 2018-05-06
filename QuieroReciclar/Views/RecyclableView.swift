@@ -11,4 +11,8 @@ import UIKit
 
 class RecyclableView : UIView {
     @IBOutlet weak var title : UILabel!
+    
+    override func awakeFromNib() {
+        
+    }
 }
